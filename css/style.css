@@ -1,12 +1,16 @@
-@import "tailwindcss";
+@import "tailwind.css";
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
 
 .photo-border {
-    border: 3px solid; /*#4f46e5 Indigo-600 */
+    border: 3px solid;
 }
 
 .typed-cursor {
   font-size: inherit;
   font-weight: bold;
   vertical-align: top;
-  display: inline-block; /* Ensure it behaves like text */
+  display: inline-block;
 }
