@@ -1,0 +1,11 @@
+.photo-border {
+    border: 4px solid #4f46e5; /* Indigo-600 */
+}
+
+.typed-cursor {
+  font-size: inherit;
+  font-weight: bold;
+  vertical-align: top;
+  transform: scaleY(1.2);        /* Make the pipe taller */
+  display: inline-block; /* Ensure it behaves like text */
+}
