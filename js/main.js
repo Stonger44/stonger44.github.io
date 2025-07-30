@@ -3,15 +3,18 @@
 
     // Typed.js initialization
     document.addEventListener("DOMContentLoaded", () => {
-      new Typed("#typed-text", {
-        strings: [
-          "Unreal Engine Enthusiast",
+        const phrases = [
+          "Game Developer",
+          "Unreal Engine Developer",
           "Unity Developer",
-          "Lover of Game Mechanics",
-          "I like my cat!",
-          "Coffee Addict",
-          "Always Learning"
-        ],
+          "Software Engineer",
+          "C# Developer",
+          "Goober",
+          "I play video games",
+          "I make video games",
+        ];
+      new Typed("#typed-text", {
+        strings: phrases,
         typeSpeed: 50,
         backSpeed: 30,
         backDelay: 2000,
