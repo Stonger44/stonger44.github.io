@@ -16,6 +16,8 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body class="bg-gray-900 font-roboto text-white text-lg flex flex-col min-h-screen bg-[url('../assets/images/Horizon.jpg')] bg-cover bg-center relative">
   
@@ -26,10 +28,17 @@
     <!-- Navbar -->
     <nav class="bg-black bg-opacity-90 fixed top-0 w-full z-50">
       <div class="max-w-5xl mx-auto px-4 py-4 flex justify-center space-x-6 text-gray-300 text-base font-medium">
-        <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" target="_blank" class="hover:underline">Resume</a>
-        <a href="https://github.com/Stonger44" target="_blank" class="hover:underline">GitHub</a>
-        <a href="https://stonger44.itch.io/" target="_blank" class="hover:underline">Itch.io</a>
-        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" target="_blank" class="inline-flex items-center whitespace-nowrap hover:underline">
+          <i class="fas fa-file-alt"></i>&nbsp;Resume
+        </a>
+        <a href="https://github.com/Stonger44" target="_blank" class="inline-flex items-center whitespace-nowrap hover:underline">
+          <i class="fab fa-github"></i>&nbsp;GitHub
+        </a>
+        <a href="https://stonger44.itch.io/" target="_blank" class="inline-flex items-center whitespace-nowrap hover:underline">
+          <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;Itch.io</a>
+        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="inline-flex items-center whitespace-nowrap hover:underline">
+          <i class="fab fa-linkedin"></i>&nbsp;LinkedIn
+        </a>
       </div>
     </nav>
 
@@ -70,7 +79,7 @@
         <div class="md:w-1/2 flex flex-col space-y-3">
           <div>
             <h2 class="text-3xl font-bold inline">Cozy Island</h2>
-            <nobr><span class="align-text-bottom">(Solo Developer)</span></nobr>
+            <span class="align-text-bottom inline-flex items-center whitespace-nowrap">(Solo Developer)</span>
           </div>
           <p><strong>Tech:</strong> Unreal Engine, Blueprints</p>
           <p>
@@ -83,15 +92,15 @@
             <a
               href="https://github.com/Stonger44/Cozy-Island"
               target="_blank"
-              class="inline-block px-5 py-2 bg-black border border-black rounded hover:border hover:bg-black hover:border-white transition"
-              >GitHub</a
-            >
+              class="inline-flex items-center whitespace-nowrap px-5 py-2 bg-black border border-black rounded hover:border hover:bg-black hover:border-white transition">
+              <i class="fab fa-github"></i>&nbsp;GitHub
+            </a>
             <a
               href="https://stonger44.itch.io/cozy-island"
               target="_blank"
-              class="inline-block px-5 py-2 bg-red-500 border border-red-500 rounded hover:border hover:bg-red-500 hover:border-white transition"
-              >Itch.io</a
-            >
+              class="inline-flex items-center whitespace-nowrap px-5 py-2 bg-[#fa5c5c] border border-[#fa5c5c] rounded hover:border hover:bg-[#fa5c5c] hover:border-white transition">
+              <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;Itch.io
+              </a>
           </div>
         </div>
       </div>
@@ -109,7 +118,7 @@
         <div class="md:w-1/2 flex flex-col space-y-3">
           <div>
             <h2 class="text-3xl font-bold inline">Galaxy Shooter</h2>
-            <nobr><span class="align-text-bottom">(Solo Developer)</span></nobr>
+            <span class="align-text-bottom inline-flex items-center whitespace-nowrap">(Solo Developer)</span>
           </div>
           <p><strong>Tech:</strong> Unity, C#</p>
           <p>
@@ -122,15 +131,15 @@
             <a
               href="https://github.com/Stonger44/Galaxy-Shooter"
               target="_blank"
-              class="inline-block px-5 py-2 bg-black border border-black rounded hover:border hover:bg-black hover:border-white transition"
-              >GitHub</a
-            >
+              class="inline-flex items-center whitespace-nowrap px-5 py-2 bg-black border border-black rounded hover:border hover:bg-black hover:border-white transition">
+              <i class="fab fa-github"></i>&nbsp;GitHub
+            </a>
             <a
               href="https://stonger44.itch.io/galaxy-shooter"
               target="_blank"
-              class="inline-block px-5 py-2 bg-red-500 border border-red-500 rounded hover:border hover:bg-red-500 hover:border-white transition"
-              >Itch.io</a
-            >
+              class="inline-flex items-center whitespace-nowrap px-5 py-2 bg-[#fa5c5c] border border-[#fa5c5c] rounded hover:border hover:bg-[#fa5c5c] hover:border-white transition">
+              <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;Itch.io
+            </a>
           </div>
         </div>
       </div>
@@ -148,7 +157,7 @@
         <div class="md:w-1/2 flex flex-col space-y-3">
           <div>
             <h2 class="text-3xl font-bold inline">Mech Tower Defense</h2>
-            <nobr><span class="align-text-bottom">(Solo Developer)</span></nobr>
+            <span class="align-text-bottom inline-flex items-center whitespace-nowrap">(Solo Developer)</span>
           </div>
           <p><strong>Tech:</strong> Unity, C#</p>
           <p>
@@ -161,13 +170,15 @@
             <a
               href="https://github.com/Stonger44/Mech-Tower-Defense"
               target="_blank"
-              class="inline-block px-5 py-2 bg-black border border-black rounded hover:border hover:bg-black hover:border-white transition"
-              >GitHub</a>
+              class="inline-flex items-center whitespace-nowrap px-5 py-2 bg-black border border-black rounded hover:border hover:bg-black hover:border-white transition">
+              <i class="fab fa-github"></i>&nbsp;GitHub
+            </a>
             <a
               href="https://stonger44.itch.io/mech-tower-defense"
               target="_blank"
-              class="inline-block px-5 py-2 bg-red-500 border border-red-500 rounded hover:border hover:bg-red-500 hover:border-white transition"
-              >Itch.io</a>
+              class="inline-flex items-center whitespace-nowrap px-5 py-2 bg-[#fa5c5c] border border-[#fa5c5c] rounded hover:border hover:bg-[#fa5c5c] hover:border-white transition">
+              <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;Itch.io
+            </a>
           </div>
         </div>
       </div>
@@ -180,23 +191,53 @@
 
     <!-- Footer -->
     <footer class="mt-auto bg-black text-gray-300 text-center py-6 select-none">
-      <nav class="my-6">
-        <a href="resume.pdf" class="mx-2  hover:underline">Resume</a>
-        <a href="https://github.com/Stonger44" target="_blank" class="mx-2  hover:underline">GitHub</a>
-        <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 hover:underline">Itch.io</a>
-        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="mx-2 hover:underline">LinkedIn</a>
+      <nav class="standard-screen-size my-6">
+        <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+          <i class="fas fa-file-alt"></i>&nbsp;Resume
+        </a>
+        <a href="https://github.com/Stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+          <i class="fab fa-github"></i>&nbsp;GitHub
+        </a>
+        <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+          <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;Itch.io
+        </a>
+        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+          <i class="fab fa-linkedin"></i>&nbsp;LinkedIn
+        </a>
       </nav>
-      <div class="copyRightDiv mt-10 mb-6">
-        <nobr>Copyright &copy; <span class="year"></span></nobr>
+      <div class="small-screen-size">
+        <div>
+          <a href="resume.pdf" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+            <i class="fas fa-file-alt"></i>&nbsp;Resume
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/Stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+            <i class="fab fa-github"></i>&nbsp;GitHub
+          </a>
+        </div>
+        <div>
+          <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;Itch.io
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap hover:underline">
+            <i class="fab fa-linkedin"></i>&nbsp;LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="standard-screen-size mt-10 mb-6">
+        Copyright &copy; <span class="year"></span>
         <span>&nbsp;|&nbsp;</span>
         <a href="mailto:stonger44@gmail.com" class="hover:underline">stonger44@gmail.com</a>
       </div>
-      <div class="smallCopyRightDiv mt-10 mb-6">
+      <div class="small-screen-size mt-10 mb-6">
         <div>
-          <nobr><a href="mailto:stonger44@gmail.com" class="hover:underline">stonger44@gmail.com</a></nobr>
+          <a href="mailto:stonger44@gmail.com" class="hover:underline">stonger44@gmail.com</a>
         </div>
         <div>
-          <nobr>Copyright &copy; <span class="year"></span></nobr>
+          Copyright &copy; <span class="year"></span>
         </div>
       </div>
     </footer>

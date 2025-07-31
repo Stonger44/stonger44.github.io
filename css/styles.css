@@ -8,20 +8,20 @@
     border: 3px solid;
 }
 
-/* Default state (for screens > 350px) */
-.copyRightDiv {
+/* Default state (for screens > 420px) */
+.standard-screen-size {
   display: block;
 }
-.smallCopyRightDiv {
+.small-screen-size {
   display: none;
 }
 
-/* When screen width is 350px or less */
-@media (max-width: 350px) {
-  .copyRightDiv {
+/* When screen width is 420px or less */
+@media (max-width: 420px) {
+  .standard-screen-size {
     display: none;
   }
-  .smallCopyRightDiv {
+  .small-screen-size {
     display: block;
   }
 }
