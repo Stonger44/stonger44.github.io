@@ -4,6 +4,14 @@
       element.textContent = new Date().getFullYear();
     });
 
+    // Hamburger menu toggle for mobile
+    const toggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
     // Typed.js initialization
     document.addEventListener("DOMContentLoaded", () => {
         const phrases = [
