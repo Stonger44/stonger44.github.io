@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.photo-border {
+    border: 3px solid;
+}
