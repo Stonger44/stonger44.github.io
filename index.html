@@ -28,7 +28,7 @@
     
     <!-- Navbar -->
     <nav class="bg-black bg-opacity-90 fixed top-0 w-full z-50">
-      <div class="max-w-5xl mx-auto px-4 py-4 flex justify-center items-center relative">
+      <div class="max-w-5xl mx-auto px-4 py-5 md:py-4 flex justify-center items-center relative">
         
         <!-- Hamburger button (on small screens) -->
         <button id="menu-toggle" class="md:hidden absolute right-4 text-white">
@@ -46,7 +46,7 @@
             <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
           </a>
           <a href="https://stonger44.itch.io/" target="_blank" class="inline-flex items-center whitespace-nowrap  group">
-            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4 mt-[-1px]" alt="Itch.io" />&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
+            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4" alt="Itch.io" />&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
           </a>
           <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="inline-flex items-center whitespace-nowrap group">
             <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
@@ -56,19 +56,29 @@
       </div>
 
       <!-- Mobile menu (shown when hamburger clicked) -->
-      <div id="mobile-menu" class="md:hidden hidden flex-col space-y-4 bg-black bg-opacity-90 px-4 py-4 text-base font-medium max-w-5xl mx-auto">
-        <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" target="_blank" class="inline-flex items-center whitespace-nowrap group">
-          <i class="fas fa-file-alt"></i>&nbsp;<span class="group-hover:underline group-active:underline">Resume</span>
-        </a>
-        <a href="https://github.com/Stonger44" target="_blank" class="inline-flex items-center whitespace-nowrap group">
-          <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
-        </a>
-        <a href="https://stonger44.itch.io/" target="_blank" class="inline-flex items-center whitespace-nowrap group">
-          <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4 mt-[-1px]" alt="Itch.io" />&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
-        </a>
-        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="inline-flex items-center whitespace-nowrap group">
-          <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
-        </a>
+      <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out py-0 flex-col space-y-4 bg-black bg-opacity-90 px-4 text-base font-medium max-w-5xl mx-auto absolute right-0">
+
+        <div>
+          <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" target="_blank" class="inline-flex items-center whitespace-nowrap group">
+            <i class="fas fa-file-alt"></i>&nbsp;<span class="group-hover:underline group-active:underline">Resume</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://github.com/Stonger44" target="_blank" class="inline-flex items-center whitespace-nowrap group">
+            <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://stonger44.itch.io/" target="_blank" class="inline-flex items-center whitespace-nowrap group">
+            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4 translate-x-[2px]" alt="Itch.io" />
+            &nbsp;<span class="group-hover:underline group-active:underline translate-x-[5px]">Itch.io</span>
+          </a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="inline-flex items-center whitespace-nowrap group">
+            <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
+          </a>
+        </div>
       </div>
     </nav>
 
@@ -232,7 +242,7 @@
           <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
         </a>
         <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
-          <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4 mt-[-1px]"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
+          <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
         </a>
         <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
           <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
@@ -251,7 +261,7 @@
         </div>
         <div class="my-1">
           <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
-            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4 mt-[-1px]"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
+            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
           </a>
         </div>
         <div class="my-1">

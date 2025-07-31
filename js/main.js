@@ -9,7 +9,13 @@
     const mobileMenu = document.getElementById('mobile-menu');
 
     toggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const isCollapsed = mobileMenu.classList.contains('max-h-0');
+
+      mobileMenu.classList.toggle('max-h-0', !isCollapsed);
+      mobileMenu.classList.toggle('max-h-96', isCollapsed);
+
+      mobileMenu.classList.toggle('py-0', !isCollapsed);
+      mobileMenu.classList.toggle('py-4', isCollapsed);
     });
 
     // Typed.js initialization
