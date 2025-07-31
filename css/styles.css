@@ -7,3 +7,22 @@
 .photo-border {
     border: 3px solid;
 }
+
+/* Default state (for screens > 350px) */
+.copyRightDiv {
+  display: block;
+}
+.smallCopyRightDiv {
+  display: none;
+}
+
+/* When screen width is 350px or less */
+@media (max-width: 350px) {
+  .copyRightDiv {
+    display: none;
+  }
+  .smallCopyRightDiv {
+    display: block;
+  }
+}
+

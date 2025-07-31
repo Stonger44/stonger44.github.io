@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="bg-gray-900 font-roboto text-white flex flex-col min-h-screen bg-[url('../assets/images/Horizon.jpg')] bg-cover bg-center relative">
+<body class="bg-gray-900 font-roboto text-white text-lg flex flex-col min-h-screen bg-[url('../assets/images/Horizon.jpg')] bg-cover bg-center relative">
   
   <!-- Background dim overlay -->
   <div class="absolute inset-0 bg-black/22 z-0"></div>
@@ -25,7 +25,7 @@
   <div class="relative z-10 flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav class="bg-black bg-opacity-90 fixed top-0 w-full z-50">
-      <div class="max-w-5xl mx-auto px-4 py-4 flex justify-center space-x-6 text-gray-300 text-sm font-medium">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex justify-center space-x-6 text-gray-300 text-base font-medium">
         <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" target="_blank" class="hover:underline">Resume</a>
         <a href="https://github.com/Stonger44" target="_blank" class="hover:underline">GitHub</a>
         <a href="https://stonger44.itch.io/" target="_blank" class="hover:underline">Itch.io</a>
@@ -54,10 +54,11 @@
     <!-- Projects Section -->
     <section id="projects" class="max-w-5xl mx-auto px-4 py-10 space-y-12">
 
-      <h2 class="text-4xl font-bold mb-4 text-left">Projects</h2>
+      <h2 class="text-4xl font-bold mb-4 text-center">Projects</h2>
+      <hr />
 
       <!-- Cozy Island -->
-      <div class="flex flex-col md:flex-row items-center gap-6">
+      <div class="flex flex-col items-center md:flex-row gap-6">
         <video
           src="assets/videos/CozyIsland_Demo.mp4"
           autoplay
@@ -68,7 +69,7 @@
         ></video>
         <div class="md:w-1/2 flex flex-col space-y-3">
           <div>
-            <h2 class="text-2xl font-bold inline">Cozy Island</h2>
+            <h2 class="text-3xl font-bold inline">Cozy Island</h2>
             <span class="">Solo Developer</span>
           </div>
           <p><strong>Tech:</strong> Unreal Engine, Blueprints</p>
@@ -96,7 +97,7 @@
       </div>
 
       <!-- Galaxy Shooter -->
-      <div class="flex flex-col md:flex-row items-center gap-6">
+      <div class="flex flex-col items-center md:flex-row gap-6">
         <video
           src="assets/videos/CozyIsland_Demo.mp4"
           autoplay
@@ -107,7 +108,7 @@
         ></video>
         <div class="md:w-1/2 flex flex-col space-y-3">
           <div>
-            <h2 class="text-2xl font-bold inline">Galaxy Shooter</h2>
+            <h2 class="text-3xl font-bold inline">Galaxy Shooter</h2>
             <span class="">Solo Developer</span>
           </div>
           <p><strong>Tech:</strong> Unity, C#</p>
@@ -115,7 +116,7 @@
             A horizontal space shooter arcade! Pew pew enemies! Collect Power-Ups! Shields! Missiles! Space Bombs! Can you survive all 5 waves and defeat the Boss?!
           </p>
           <p>
-            Horizontal space shooter with difficulty inspired by Dark Souls. Multi-phase boss battle with regenerating shields, destructible generators, and timed vulnerability. Implemented a time-slowing boost, homing missiles, and space bombs with expanding visual radius for high-impact tactical play. Power-ups must be earned and used strategically.
+            Horizontal space shooter with difficulty inspired by Dark Souls. Designed a multi-phase boss battle with regenerating shields, destructible generators, and timed vulnerability. Implemented a time-slowing boost, homing missiles, and space bombs for high-impact tactical play. Power-ups must be earned and used strategically.
           </p>
           <div class="space-x-4">
             <a
@@ -135,7 +136,7 @@
       </div>
 
       <!-- Mech Tower Defense -->
-      <div class="flex flex-col md:flex-row items-center gap-6">
+      <div class="flex flex-col items-center md:flex-row gap-6">
         <video
           src="assets/videos/CozyIsland_Demo.mp4"
           autoplay
@@ -146,7 +147,7 @@
         ></video>
         <div class="md:w-1/2 flex flex-col space-y-3">
           <div>
-            <h2 class="text-2xl font-bold inline">Mech Tower Defense</h2>
+            <h2 class="text-3xl font-bold inline">Mech Tower Defense</h2>
             <span class="">Solo Developer</span>
           </div>
           <p><strong>Tech:</strong> Unity, C#</p>
@@ -178,17 +179,26 @@
     </section>
 
     <!-- Footer -->
-    <footer class="mt-auto bg-black text-gray-300 text-center py-6 text-sm select-none">
-      <nav class="mb-4">
-        <a href="resume.pdf" class="mx-3  hover:underline">Resume</a>
-        <a href="https://github.com/Stonger44" target="_blank" class="mx-3  hover:underline">GitHub</a>
-        <a href="https://stonger44.itch.io/" target="_blank" class="mx-3 hover:underline">Itch.io</a>
-        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="mx-3 hover:underline">LinkedIn</a>
+    <footer class="mt-auto bg-black text-gray-300 text-center py-6 select-none">
+      <nav class="my-6">
+        <a href="resume.pdf" class="mx-2  hover:underline">Resume</a>
+        <a href="https://github.com/Stonger44" target="_blank" class="mx-2  hover:underline">GitHub</a>
+        <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 hover:underline">Itch.io</a>
+        <a href="https://www.linkedin.com/in/brian-stong-b36218133/" target="_blank" class="mx-2 hover:underline">LinkedIn</a>
       </nav>
-      <p>
-        Copyright &copy; <span id="year"></span> &nbsp;|&nbsp;
-      <a href="mailto:stonger44@gmail.com" class="hover:underline">stonger44@gmail.com</a>
-      </p>
+      <div class="copyRightDiv mt-10 mb-6">
+        <nobr>Copyright &copy; <span class="year"></span></nobr>
+        <span>&nbsp;|&nbsp;</span>
+        <a href="mailto:stonger44@gmail.com" class="hover:underline">stonger44@gmail.com</a>
+      </div>
+      <div class="smallCopyRightDiv mt-10 mb-6">
+        <div>
+          <nobr><a href="mailto:stonger44@gmail.com" class="hover:underline">stonger44@gmail.com</a></nobr>
+        </div>
+        <div>
+          <nobr>Copyright &copy; <span class="year"></span></nobr>
+        </div>
+      </div>
     </footer>
   </div>
 

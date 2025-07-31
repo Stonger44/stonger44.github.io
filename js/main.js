@@ -1,5 +1,8 @@
     // Auto-update year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    let yearClasses = document.getElementsByClassName("year");
+    Array.from(yearClasses).forEach(element => {
+      element.textContent = new Date().getFullYear();
+    });
 
     // Typed.js initialization
     document.addEventListener("DOMContentLoaded", () => {
