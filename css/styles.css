@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.photo-border {
+    border: 2px solid;
+}
+
+/* Default state (for screens > 420px) */
+.standard-screen-size {
+  display: block;
+}
+.small-screen-size {
+  display: none;
+}
+
+/* When screen width is 420px or less */
+@media (max-width: 420px) {
+  .standard-screen-size {
+    display: none;
+  }
+  .small-screen-size {
+    display: block;
+  }
+}
+
