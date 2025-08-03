@@ -48,18 +48,18 @@ window.addEventListener('scroll', () => {
   const fullHeight = document.documentElement.scrollHeight;
 
   const atBottom = scrollY + viewportHeight >= fullHeight - 10;
-  const overscrollAmount = Math.max(0, (scrollY + viewportHeight) - fullHeight);
 
   if (atBottom) {
-    const footerHeight = footer.offsetHeight;
+    const footerRect = footer.getBoundingClientRect();
+    const footerVisibleHeight = viewportHeight - footerRect.top;
+
     overscrollCover.classList.remove('hidden');
 
-    // Final height: match footer + overscroll
-    overscrollCover.style.height = (footerHeight + overscrollAmount) + 'px';
+    // Use actual visible part of footer (including overscroll movement)
+    overscrollCover.style.height = `${footerVisibleHeight}px`;
   } else {
     overscrollCover.classList.add('hidden');
     overscrollCover.style.height = '';
   }
 });
-
 
