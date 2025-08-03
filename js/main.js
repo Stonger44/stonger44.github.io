@@ -40,6 +40,7 @@ Array.from(yearClasses).forEach(element => {
 
 // Black bottom overlay to cover overscroll background
 const overscrollCover = document.getElementById('overscroll-cover');
+const footer = document.querySelector('footer');
 const minHeightPx = 40;
 
 window.addEventListener('scroll', () => {
@@ -53,11 +54,11 @@ window.addEventListener('scroll', () => {
   if (atBottom) {
     overscrollCover.classList.remove('hidden');
 
-    // Max height is 50% of viewport height (adjust as you like)
-    const maxHeightPx = viewportHeight * 0.5;
+    // Use the footer's height as max cap
+    const footerHeight = footer?.getBoundingClientRect().height || 200;
 
     let heightPx = minHeightPx + overscrollAmount;
-    if (heightPx > maxHeightPx) heightPx = maxHeightPx;
+    if (heightPx > footerHeight) heightPx = footerHeight;
 
     overscrollCover.style.height = heightPx + 'px';
   } else {
@@ -65,3 +66,4 @@ window.addEventListener('scroll', () => {
     overscrollCover.style.height = '';
   }
 });
+
