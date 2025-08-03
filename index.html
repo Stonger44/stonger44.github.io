@@ -30,10 +30,6 @@
 
   <!-- Background dim overlay -->
   <div class="fixed inset-0 z-10 bg-black/30"></div>
-    
-  <!-- Black bottom overlay to cover overscroll background -->
-  <div id="bottom-overscroll-cover" class="fixed bottom-0 left-0 right-0 h-40 bg-black pointer-events-none z-20 hidden"></div>
-
 
   <!-- Navbar -->
   <nav class="bg-black bg-opacity-90 fixed top-0 w-full z-30">
@@ -258,8 +254,8 @@
     </div>
   </main>
 
-    <!-- Footer -->
-  <footer class="relative z-20 mt-auto bg-black text-center py-6 select-text w-full">
+  <!-- Footer -->
+  <footer class="relative z-30 mt-auto bg-black text-center py-6 select-text w-full">
     <nav class="standard-screen-size my-6">
       <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" class="mx-2 inline-flex items-center whitespace-nowrap group">
         <i class="fas fa-file-alt"></i>&nbsp;<span class="group-hover:underline group-active:underline">Resume</span>
@@ -318,6 +314,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Black bottom overlay to cover overscroll background -->
+  <div id="overscroll-cover" class="fixed bottom-0 left-0 right-0 h-40 bg-black pointer-events-none z-20 hidden"></div>
 
   <script src="js/main.js"></script>
 </body>

@@ -38,18 +38,33 @@ Array.from(yearClasses).forEach(element => {
   element.textContent = new Date().getFullYear();
 });
 
-// Overscroll fix
-const overscrollCover = document.getElementById('bottom-overscroll-cover');
+// Black bottom overlay to cover overscroll background
+const overscrollCover = document.getElementById('overscroll-cover');
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY || window.pageYOffset;
   const viewportHeight = window.innerHeight;
   const fullHeight = document.documentElement.scrollHeight;
 
-  // If near bottom (within 40px), show overlay, else hide
-  if (scrollY + viewportHeight >= fullHeight - 10) {
+  const atBottom = scrollY + viewportHeight >= fullHeight - 10;
+  const overscrollAmount = scrollY + viewportHeight - fullHeight;
+
+  if (atBottom) {
     overscrollCover.classList.remove('hidden');
+
+    if (overscrollAmount > 100) {
+      // User is dragging far up (hard overscroll)
+      overscrollCover.classList.remove('h-40');
+      overscrollCover.classList.add('h-64');
+    } else {
+      // Normal overscroll
+      overscrollCover.classList.remove('h-64');
+      overscrollCover.classList.add('h-40');
+    }
+
   } else {
+    // Not at bottom, hide everything
     overscrollCover.classList.add('hidden');
+    overscrollCover.classList.remove('h-40', 'h-64');
   }
 });

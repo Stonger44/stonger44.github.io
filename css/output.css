@@ -294,8 +294,11 @@
   .h-44 {
     height: calc(var(--spacing) * 44);
   }
-  .h-\[100vh\] {
-    height: 100vh;
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
+  .h-80 {
+    height: calc(var(--spacing) * 80);
   }
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
