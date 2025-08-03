@@ -52,14 +52,12 @@ window.addEventListener('scroll', () => {
   if (atBottom) {
     const footerRect = footer.getBoundingClientRect();
     const footerVisibleHeight = viewportHeight - footerRect.top;
+    const footerVisibleHalfHeight = Math.max(0, footerVisibleHeight / 2);
 
     overscrollCover.classList.remove('hidden');
-
-    // Use actual visible part of footer (including overscroll movement)
-    overscrollCover.style.height = `${footerVisibleHeight}px`;
+    overscrollCover.style.height = `${footerVisibleHalfHeight}px`;
   } else {
     overscrollCover.classList.add('hidden');
     overscrollCover.style.height = '';
   }
 });
-
