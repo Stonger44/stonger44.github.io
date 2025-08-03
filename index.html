@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
   <title>Brian Kenji Stong | Game Developer</title>
 
   <!-- Alpine.js CDN -->
@@ -21,7 +22,10 @@
 </head>
 <body class="font-roboto text-white text-lg flex flex-col min-h-screen relative overflow-x-hidden">
   
-  <!-- Background image fixed to viewport -->
+  <!-- Black background div - at the very back -->
+  <div class="fixed inset-0 -z-20 bg-black"></div>
+
+  <!-- Background image div -->
   <div
     class="fixed inset-0 -z-10 bg-cover bg-center"
     style="background-image: url('assets/images/Horizon.jpg');"

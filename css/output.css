@@ -204,6 +204,9 @@
   .-z-10 {
     z-index: calc(10 * -1);
   }
+  .-z-20 {
+    z-index: calc(20 * -1);
+  }
   .z-10 {
     z-index: 10;
   }
@@ -637,6 +640,11 @@
       line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
+}
+html, body {
+  background: transparent;
+  margin: 0;
+  min-height: 100vh;
 }
 .font-roboto {
   font-family: 'Roboto', sans-serif;
