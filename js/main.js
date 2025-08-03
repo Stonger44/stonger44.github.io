@@ -1,9 +1,3 @@
-    // Auto-update year in footer
-    let yearClasses = document.getElementsByClassName("year");
-    Array.from(yearClasses).forEach(element => {
-      element.textContent = new Date().getFullYear();
-    });
-
     // Hamburger menu toggle for mobile
     const toggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -26,7 +20,6 @@
           "Unity Developer",
           "C# Developer",
           "Software Engineer",
-          "Goober",
           "I play video games",
           "I make video games",
         ];
@@ -37,4 +30,10 @@
         backDelay: 2000,
         loop: true,
       });
+    });
+
+    // Auto-update year in footer
+    let yearClasses = document.getElementsByClassName("year");
+    Array.from(yearClasses).forEach(element => {
+      element.textContent = new Date().getFullYear();
     });
