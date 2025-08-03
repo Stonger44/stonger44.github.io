@@ -43,19 +43,18 @@ const overscrollCover = document.getElementById('overscroll-cover');
 const footer = document.querySelector('footer');
 
 window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY || window.pageYOffset;
+  const footerRect = footer.getBoundingClientRect();
   const viewportHeight = window.innerHeight;
-  const fullHeight = document.documentElement.scrollHeight;
 
-  const atBottom = scrollY + viewportHeight >= fullHeight - 10;
-
-  if (atBottom) {
-    const footerRect = footer.getBoundingClientRect();
-    const footerVisibleHeight = viewportHeight - footerRect.top;
-    const footerVisibleHalfHeight = Math.max(0, footerVisibleHeight / 2);
-
+  // Only show overlay when part of footer is onscreen (i.e. during overscroll)
+  if (footerRect.top < viewportHeight) {
     overscrollCover.classList.remove('hidden');
-    overscrollCover.style.height = `${footerVisibleHalfHeight}px`;
+
+    // Cap the overlay to half the visible footer height
+    const visibleFooterHeight = viewportHeight - footerRect.top;
+    const halfHeight = Math.max(0, visibleFooterHeight * 0.8);
+
+    overscrollCover.style.height = `${halfHeight}px`;
   } else {
     overscrollCover.classList.add('hidden');
     overscrollCover.style.height = '';
