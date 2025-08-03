@@ -40,6 +40,7 @@ Array.from(yearClasses).forEach(element => {
 
 // Black bottom overlay to cover overscroll background
 const overscrollCover = document.getElementById('overscroll-cover');
+const minHeightPx = 40;
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY || window.pageYOffset;
@@ -47,28 +48,20 @@ window.addEventListener('scroll', () => {
   const fullHeight = document.documentElement.scrollHeight;
 
   const atBottom = scrollY + viewportHeight >= fullHeight - 10;
-  const overscrollAmount = scrollY + viewportHeight - fullHeight;
-
-  const hidden = 'hidden';
-  const overscrollCoverheight = 'h-40';
-  const superOverscrollCoverheight = 'h-80';
+  const overscrollAmount = Math.max(0, (scrollY + viewportHeight) - fullHeight);
 
   if (atBottom) {
-    overscrollCover.classList.remove(hidden);
+    overscrollCover.classList.remove('hidden');
 
-    if (overscrollAmount > 100) {
-      // User is dragging far up (hard overscroll)
-      overscrollCover.classList.remove(overscrollCoverheight);
-      overscrollCover.classList.add(superOverscrollCoverheight);
-    } else {
-      // Normal overscroll
-      overscrollCover.classList.remove(superOverscrollCoverheight);
-      overscrollCover.classList.add(overscrollCoverheight);
-    }
+    // Max height is 50% of viewport height (adjust as you like)
+    const maxHeightPx = viewportHeight * 0.5;
 
+    let heightPx = minHeightPx + overscrollAmount;
+    if (heightPx > maxHeightPx) heightPx = maxHeightPx;
+
+    overscrollCover.style.height = heightPx + 'px';
   } else {
-    // Not at bottom, hide everything
-    overscrollCover.classList.add(hidden);
-    overscrollCover.classList.remove(overscrollCoverheight, superOverscrollCoverheight);
+    overscrollCover.classList.add('hidden');
+    overscrollCover.style.height = '';
   }
 });

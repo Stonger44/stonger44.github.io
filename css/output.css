@@ -285,14 +285,8 @@
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
-  .h-40 {
-    height: calc(var(--spacing) * 40);
-  }
   .h-44 {
     height: calc(var(--spacing) * 44);
-  }
-  .h-80 {
-    height: calc(var(--spacing) * 80);
   }
   .max-h-0 {
     max-height: calc(var(--spacing) * 0);
