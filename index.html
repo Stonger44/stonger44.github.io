@@ -23,19 +23,19 @@
 <body class="font-roboto text-white text-lg flex flex-col min-h-screen relative overflow-x-hidden">
   
   <!-- Black background div - at the very back -->
-  <div class="fixed inset-0 -z-20 bg-black"></div>
+  <!-- <div class="fixed inset-0 -z-20 bg-black"></div> -->
 
   <!-- Background image div -->
   <div
-    class="fixed inset-0 -z-10 bg-cover bg-center"
+    class="fixed inset-0 z-1 bg-cover bg-center"
     style="background-image: url('assets/images/Horizon.jpg');"
   ></div>
 
   <!-- Background dim overlay -->
-  <div class="fixed inset-0 -z-10 bg-black/30"></div>
+  <div class="fixed inset-0 z-1 bg-black/30"></div>
     
     <!-- Navbar -->
-    <nav class="bg-black bg-opacity-90 fixed top-0 w-full z-50">
+    <nav class="bg-black bg-opacity-90 fixed top-0 w-full z-3">
       <div class="max-w-5xl mx-auto px-4 py-5 md:py-4 flex justify-between items-center relative">
         
         <div class="text-2xl font-semibold">
@@ -102,7 +102,7 @@
 
     </nav>
 
-    <main class="flex-1 flex flex-col relative z-10 px-4 pt-20 pb-10">
+    <main class="flex-1 flex flex-col relative z-2 px-4 pt-20 pb-10">
       <div class="max-w-5xl w-full mx-auto">
         
         <!-- Hero Section -->
@@ -257,68 +257,68 @@
       </div>
     </main>
 
+  </div>
+
     <!-- Footer -->
-    <footer class="mt-auto bg-black text-center py-6 select-text w-full">
-      <nav class="standard-screen-size my-6">
+  <footer class="relative z-2 mt-auto bg-black text-center py-6 select-text w-full">
+    <nav class="standard-screen-size my-6">
+      <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" class="mx-2 inline-flex items-center whitespace-nowrap group">
+        <i class="fas fa-file-alt"></i>&nbsp;<span class="group-hover:underline group-active:underline">Resume</span>
+      </a>
+      <a href="https://github.com/Stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
+        <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
+      </a>
+      <a href="https://medium.com/@stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
+        <i class="fab fa-medium"></i>&nbsp;<span class="group-hover:underline group-active:underline">Medium</span>
+      </a>
+      <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
+        <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
+      </a>
+      <a href="https://www.linkedin.com/in/brian-stong/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
+        <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
+      </a>
+    </nav>
+    <div class="small-screen-size">
+      <div class="my-1">
         <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" class="mx-2 inline-flex items-center whitespace-nowrap group">
           <i class="fas fa-file-alt"></i>&nbsp;<span class="group-hover:underline group-active:underline">Resume</span>
         </a>
+      </div>
+      <div class="my-1">
         <a href="https://github.com/Stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
           <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
         </a>
+      </div>
+      <div class="my-1">
         <a href="https://medium.com/@stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
           <i class="fab fa-medium"></i>&nbsp;<span class="group-hover:underline group-active:underline">Medium</span>
         </a>
+      </div>
+      <div class="my-1">
         <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
           <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
         </a>
+      </div>
+      <div class="my-1">
         <a href="https://www.linkedin.com/in/brian-stong/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
           <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
         </a>
-      </nav>
-      <div class="small-screen-size">
-        <div class="my-1">
-          <a href="assets/files/Brian_Stong_Resume_GameDeveloper.pdf" class="mx-2 inline-flex items-center whitespace-nowrap group">
-            <i class="fas fa-file-alt"></i>&nbsp;<span class="group-hover:underline group-active:underline">Resume</span>
-          </a>
-        </div>
-        <div class="my-1">
-          <a href="https://github.com/Stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
-            <i class="fab fa-github"></i>&nbsp;<span class="group-hover:underline group-active:underline">GitHub</span>
-          </a>
-        </div>
-        <div class="my-1">
-          <a href="https://medium.com/@stonger44" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
-            <i class="fab fa-medium"></i>&nbsp;<span class="group-hover:underline group-active:underline">Medium</span>
-          </a>
-        </div>
-        <div class="my-1">
-          <a href="https://stonger44.itch.io/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
-            <img src="./assets/images/itchio-logo-textless-white.png" class="w-4 h-4"></img>&nbsp;<span class="group-hover:underline group-active:underline">Itch.io</span>
-          </a>
-        </div>
-        <div class="my-1">
-          <a href="https://www.linkedin.com/in/brian-stong/" target="_blank" class="mx-2 inline-flex items-center whitespace-nowrap group">
-            <i class="fab fa-linkedin"></i>&nbsp;<span class="group-hover:underline group-active:underline">LinkedIn</span>
-          </a>
-        </div>
       </div>
-      <div class="standard-screen-size mt-10 mb-6">
-        Copyright &copy; <span class="year"></span>
-        <span>&nbsp;|&nbsp;</span>
+    </div>
+    <div class="standard-screen-size mt-10 mb-6">
+      Copyright &copy; <span class="year"></span>
+      <span>&nbsp;|&nbsp;</span>
+      <a href="mailto:brian.kenji.stong@gmail.com" class="hover:underline active:underline">brian.kenji.stong@gmail.com</a>
+    </div>
+    <div class="small-screen-size mt-10 mb-6">
+      <div class="my-2">
         <a href="mailto:brian.kenji.stong@gmail.com" class="hover:underline active:underline">brian.kenji.stong@gmail.com</a>
       </div>
-      <div class="small-screen-size mt-10 mb-6">
-        <div class="my-2">
-          <a href="mailto:brian.kenji.stong@gmail.com" class="hover:underline active:underline">brian.kenji.stong@gmail.com</a>
-        </div>
-        <div class="my-2">
-          Copyright &copy; <span class="year"></span>
-        </div>
+      <div class="my-2">
+        Copyright &copy; <span class="year"></span>
       </div>
-    </footer>
-    
-  </div>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
