@@ -49,22 +49,26 @@ window.addEventListener('scroll', () => {
   const atBottom = scrollY + viewportHeight >= fullHeight - 10;
   const overscrollAmount = scrollY + viewportHeight - fullHeight;
 
+  const hidden = 'hidden';
+  const overscrollCoverheight = 'h-40';
+  const superOverscrollCoverheight = 'h-80';
+
   if (atBottom) {
-    overscrollCover.classList.remove('hidden');
+    overscrollCover.classList.remove(hidden);
 
     if (overscrollAmount > 100) {
       // User is dragging far up (hard overscroll)
-      overscrollCover.classList.remove('h-40');
-      overscrollCover.classList.add('h-64');
+      overscrollCover.classList.remove(overscrollCoverheight);
+      overscrollCover.classList.add(superOverscrollCoverheight);
     } else {
       // Normal overscroll
-      overscrollCover.classList.remove('h-64');
-      overscrollCover.classList.add('h-40');
+      overscrollCover.classList.remove(superOverscrollCoverheight);
+      overscrollCover.classList.add(overscrollCoverheight);
     }
 
   } else {
     // Not at bottom, hide everything
-    overscrollCover.classList.add('hidden');
-    overscrollCover.classList.remove('h-40', 'h-64');
+    overscrollCover.classList.add(hidden);
+    overscrollCover.classList.remove(overscrollCoverheight, superOverscrollCoverheight);
   }
 });
