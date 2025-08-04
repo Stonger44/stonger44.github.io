@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -431,14 +430,19 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-\[1\.5px\] {
+    border-style: var(--tw-border-style);
+    border-width: 1.5px;
+  }
   .border-\[\#fa5c5c\] {
     border-color: #fa5c5c;
   }
   .border-black {
     border-color: var(--color-black);
-  }
-  .border-red-500 {
-    border-color: var(--color-red-500);
   }
   .bg-\[\#fa5c5c\] {
     background-color: #fa5c5c;
@@ -571,6 +575,10 @@
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
   }
+  .select-none {
+    -webkit-user-select: none;
+    user-select: none;
+  }
   .select-text {
     -webkit-user-select: text;
     user-select: text;
@@ -599,22 +607,10 @@
       bottom: -6px;
     }
   }
-  .after\:bottom-\[-9px\] {
-    &::after {
-      content: var(--tw-content);
-      bottom: -9px;
-    }
-  }
   .after\:bottom-\[-10px\] {
     &::after {
       content: var(--tw-content);
       bottom: -10px;
-    }
-  }
-  .after\:bottom-\[-11px\] {
-    &::after {
-      content: var(--tw-content);
-      bottom: -11px;
     }
   }
   .after\:left-1\/2 {
@@ -673,11 +669,19 @@
       }
     }
   }
-  .hover\:border {
+  .hover\:border-2 {
     &:hover {
       @media (hover: hover) {
         border-style: var(--tw-border-style);
-        border-width: 1px;
+        border-width: 2px;
+      }
+    }
+  }
+  .hover\:border-\[1\.5px\] {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1.5px;
       }
     }
   }
