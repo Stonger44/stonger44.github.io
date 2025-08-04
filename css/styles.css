@@ -12,20 +12,24 @@ html, body {
     border: 2px solid;
 }
 
-/* Default state (for screens > 420px) */
-.standard-screen-size {
-  display: block;
-}
-.small-screen-size {
-  display: none;
-}
+/* * {
+  border: 1px solid red;
+} */
 
-/* When screen width is 420px or less */
-@media (max-width: 420px) {
-  .standard-screen-size {
+@media (max-width: 839px) {
+  #menu {
     display: none;
   }
-  .small-screen-size {
+  #menu-toggle {
     display: block;
+  }
+}
+
+@media (min-width: 840px) {
+  #menu {
+    display: flex;
+  }
+  #menu-toggle {
+    display: none;
   }
 }
