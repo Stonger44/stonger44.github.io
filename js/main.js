@@ -31,9 +31,10 @@ window.addEventListener('resize', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const phrases = [
       "Game Developer",
-      "Unreal Engine Developer",
       "Unity Developer",
       "C# Developer",
+      "Unreal Engine Developer",
+      "C++ Developer",
       "Software Engineer",
       "I play video games",
       "I make video games",
