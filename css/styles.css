@@ -16,7 +16,7 @@ html, body {
   border: 1px solid red;
 } */
 
-@media (max-width: 839px) {
+@media (max-width: 859px) {
   #menu {
     display: none;
   }
@@ -25,11 +25,17 @@ html, body {
   }
 }
 
-@media (min-width: 840px) {
+@media (min-width: 860px) {
   #menu {
     display: flex;
   }
   #menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  #navbar-title {
     display: none;
   }
 }
