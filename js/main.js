@@ -1,4 +1,4 @@
-// Hamburger menu toggle for mobile
+// -----Hamburger menu toggle for mobile-----
 const toggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -16,8 +16,10 @@ toggle.addEventListener('click', () => {
   mobileMenu.classList.toggle(burgerMenuClosedPadding, !isCollapsed);
   mobileMenu.classList.toggle(burgerMenuOpenPadding, isCollapsed);
 });
+// -----Hamburger menu toggle for mobile-----
 
-// Listen for window resize to reset mobile menu if needed
+
+// -----Listen for window resize to reset mobile menu if needed-----
 window.addEventListener('resize', () => {
   // Use the same breakpoint as your mobile menu toggle visibility logic
   if (window.innerWidth >= 839) {
@@ -26,8 +28,64 @@ window.addEventListener('resize', () => {
     mobileMenu.classList.remove(burgerMenuOpenHeight, burgerMenuOpenPadding);
   }
 });
+// -----Listen for window resize to reset mobile menu if needed-----
 
-// Typed.js initialization
+
+// -----Background video loop with crossfade-----
+const videos = document.querySelectorAll(".bg-video");
+let current = 0;
+const fadeOverlap = 2; // seconds before end to start crossfade
+
+videos.forEach((v, i) => {
+  // Set slower playback
+  v.playbackRate = 0.5;
+  
+  // Pause all except the first one
+  if (i !== 0) {
+    v.pause();
+  }
+});
+
+function scheduleNext(video, index) {
+  video.addEventListener("timeupdate", () => {
+    if (
+      video.duration &&
+      video.currentTime >= video.duration - fadeOverlap
+    ) {
+      video.removeEventListener("timeupdate", arguments.callee);
+      playNext(index);
+    }
+  });
+}
+
+function playNext(i) {
+  const currentVideo = videos[i];
+  const next = (i + 1) % videos.length;
+  const nextVideo = videos[next];
+
+  // Prep next video
+  nextVideo.currentTime = 0;
+  nextVideo.play();
+
+  // Fade
+  currentVideo.classList.replace("opacity-100", "opacity-0");
+  nextVideo.classList.replace("opacity-0", "opacity-100");
+
+  // When fully invisible, reset current
+  setTimeout(() => {
+    currentVideo.pause();
+  }, 2000); // matches Tailwind transition duration
+
+  current = next;
+  scheduleNext(nextVideo, next);
+}
+
+// Kick off loop
+scheduleNext(videos[current], current);
+// -----Background video loop with crossfade-----
+
+
+// -----Typed.js initialization-----
 document.addEventListener("DOMContentLoaded", () => {
     const phrases = [
       "Game Developer",
@@ -47,14 +105,18 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
   });
 });
+// -----Typed.js initialization-----
 
-// Auto-update year in footer
+
+// -----Auto-update year in footer-----
 let yearClasses = document.getElementsByClassName("year");
 Array.from(yearClasses).forEach(element => {
   element.textContent = new Date().getFullYear();
 });
+// -----Auto-update year in footer-----
 
-// Black bottom overlay to cover overscroll background
+
+// -----Black bottom overlay to cover overscroll background-----
 const overscrollCover = document.getElementById('overscroll-cover');
 const footer = document.querySelector('footer');
 
@@ -76,3 +138,4 @@ window.addEventListener('scroll', () => {
     overscrollCover.style.height = '';
   }
 });
+// -----Black bottom overlay to cover overscroll background-----
