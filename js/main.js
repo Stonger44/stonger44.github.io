@@ -38,7 +38,7 @@ const fadeOverlap = 2; // seconds before end to start crossfade
 
 videos.forEach((v, i) => {
   // Set slower playback
-  v.playbackRate = 0.5;
+  v.playbackRate = 0.6;
   
   // Pause all except the first one
   if (i !== 0) {
