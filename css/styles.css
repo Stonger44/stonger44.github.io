@@ -16,7 +16,7 @@ html, body {
   border: 1px solid red;
 } */
 
-@media (max-width: 859px) {
+@media (max-width: 879px) {
   #menu {
     display: none;
   }
@@ -25,7 +25,7 @@ html, body {
   }
 }
 
-@media (min-width: 860px) {
+@media (min-width: 880px) {
   #menu {
     display: flex;
   }

@@ -832,7 +832,7 @@ html, body {
 .photo-border {
   border: 2px solid;
 }
-@media (max-width: 859px) {
+@media (max-width: 879px) {
   #menu {
     display: none;
   }
@@ -840,7 +840,7 @@ html, body {
     display: block;
   }
 }
-@media (min-width: 860px) {
+@media (min-width: 880px) {
   #menu {
     display: flex;
   }
